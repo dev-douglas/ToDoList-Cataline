@@ -1,29 +1,24 @@
 {
   "todos": [
     {
-      "id": 1,
-      "text": "Lavar roupas",
-      "done": true
-    },
-    {
-      "id": 2,
-      "text": "Varrer a casa",
-      "done": true
-    },
-    {
-      "id": 3,
-      "text": "Alimentar o cachorro",
-      "done": false
-    },
-    {
-      "id": 4,
-      "text": "Ir a academia",
-      "done": true
-    },
-    {
-      "text": "limpar copo",
+      "text": "Colocar try Catch em cada requisição",
       "done": false,
-      "id": 6
+      "id": 1
+    },
+    {
+      "text": "Adinionar animações de loading",
+      "done": false,
+      "id": 2
+    },
+    {
+      "text": "incluir opção de editar tarefa",
+      "done": false,
+      "id": 3
+    },
+    {
+      "text": "Melhorar layout da aplicação",
+      "done": false,
+      "id": 4
     }
   ]
 }

@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo List</title>
+    <title>Lista de Tarefas</title>
   </head>
   <body>
     <div id="app">
-      <form>
-        <input type="text" placeholder="Todo" />
+      <form @submit.prevent="createTodo()">
+        <input type="text" placeholder="Tarefa" v-model="form.text"/>
 
         <label class="checkbox-input">
-          Não concluída
-          <input type="checkbox" checked="true" />
+          {{form.done ? 'Concluída' : 'Não Concluída'}}
+          <input type="checkbox" :checked="form.done" v-model="form.done"/>
           <span class="checkmark"></span>
         </label>
 
@@ -20,15 +20,15 @@
       </form>
 
       <ul class="todos">
-        <span class="todos-title">Todos</span>
+        <span class="todos-title">Lista de tarefas</span>
 
         <li :class="['todo', {done: todo.done}]" v-for="todo in todos">
-          <label class="checkbox-input">
+          <label class="checkbox-input" @click="toggleTodoStatus(todo)">
             <input type="checkbox" :checked="todo.done" />
             <span class="checkmark"></span>
           </label>
           <span class="todo-text">{{todo.text}}</span>
-          <a class="todo-delete"></a>
+          <a class="todo-delete" @click="destroyTodo(todo.id)"></a>
         </li>
       </ul>
     </div>
